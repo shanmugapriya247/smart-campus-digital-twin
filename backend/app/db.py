@@ -112,16 +112,24 @@ def get_db_status() -> str:
     return _db_status
 
 def fetch_records(collection, query: Optional[dict] = None, sort_key: str = "timestamp", reverse: bool = True, limit: Optional[int] = None) -> List[dict]:
-    """Universal helper to query, sanitize ObjectId, sort and slice collection records for PyMongo and Mongita."""
+    """Query, sort and limit on the DB server side (fast); fall back to Python if unsupported."""
     if query is None:
         query = {}
-    docs = list(collection.find(query))
+    try:
+        cursor = collection.find(query)
+        if sort_key:
+            cursor = cursor.sort(sort_key, -1 if reverse else 1)
+        if limit:
+            cursor = cursor.limit(limit)
+        docs = list(cursor)
+    except Exception:
+        docs = list(collection.find(query))
+        if sort_key:
+            docs.sort(key=lambda x: str(x.get(sort_key, "")), reverse=reverse)
+        if limit:
+            docs = docs[:limit]
     for d in docs:
         d.pop("_id", None)
-    if sort_key:
-        docs.sort(key=lambda x: str(x.get(sort_key, "")), reverse=reverse)
-    if limit:
-        docs = docs[:limit]
     return docs
 
 def init_indexes(db_instance):

@@ -1,108 +1,108 @@
 {
   "energy": {
-    "selected_model": "random_forest",
+    "selected_model": "xgboost",
     "metrics": {
-      "r2": 0.9968,
-      "mae": 2.9175,
-      "rmse": 4.2639
+      "r2": 0.9953,
+      "mae": 4.0117,
+      "rmse": 5.1691
     },
     "comparison": {
       "linear_regression": {
-        "r2": 0.6306,
-        "mae": 31.5034,
-        "rmse": 45.8192
+        "r2": 0.2552,
+        "mae": 52.3306,
+        "rmse": 65.3116
       },
       "random_forest": {
-        "r2": 0.9968,
-        "mae": 2.9175,
-        "rmse": 4.2639
+        "r2": 0.994,
+        "mae": 4.4383,
+        "rmse": 5.8768
       },
       "xgboost": {
-        "r2": 0.9945,
-        "mae": 3.4932,
-        "rmse": 5.5988
+        "r2": 0.9953,
+        "mae": 4.0117,
+        "rmse": 5.1691
       }
     },
     "model_path": "energy_forecaster.joblib"
   },
   "water": {
-    "selected_model": "xgboost",
+    "selected_model": "random_forest",
     "metrics": {
-      "r2": 0.7552,
-      "mae": 47.0858,
-      "rmse": 161.5983
+      "r2": 0.755,
+      "mae": 61.8635,
+      "rmse": 162.841
     },
     "comparison": {
       "linear_regression": {
-        "r2": 0.7291,
-        "mae": 100.3925,
-        "rmse": 169.9704
+        "r2": 0.4298,
+        "mae": 163.421,
+        "rmse": 248.4215
       },
       "random_forest": {
-        "r2": 0.6852,
-        "mae": 49.6935,
-        "rmse": 183.2282
+        "r2": 0.755,
+        "mae": 61.8635,
+        "rmse": 162.841
       },
       "xgboost": {
-        "r2": 0.7552,
-        "mae": 47.0858,
-        "rmse": 161.5983
+        "r2": 0.2084,
+        "mae": 84.9115,
+        "rmse": 292.7034
       }
     },
     "model_path": "water_forecaster.joblib"
   },
   "traffic": {
-    "selected_model": "random_forest",
+    "selected_model": "xgboost",
     "metrics": {
-      "r2": 0.9963,
-      "mae": 5.9483,
-      "rmse": 8.8254
+      "r2": 0.9948,
+      "mae": 8.1297,
+      "rmse": 10.4708
     },
     "comparison": {
       "linear_regression": {
-        "r2": 0.6346,
-        "mae": 60.5119,
-        "rmse": 87.1951
+        "r2": 0.2655,
+        "mae": 100.918,
+        "rmse": 124.01
       },
       "random_forest": {
-        "r2": 0.9963,
-        "mae": 5.9483,
-        "rmse": 8.8254
+        "r2": 0.9941,
+        "mae": 9.018,
+        "rmse": 11.0749
       },
       "xgboost": {
-        "r2": 0.9928,
-        "mae": 7.2203,
-        "rmse": 12.2654
+        "r2": 0.9948,
+        "mae": 8.1297,
+        "rmse": 10.4708
       }
     },
     "model_path": "traffic_forecaster.joblib"
   },
   "occupancy": {
-    "selected_model": "xgboost",
+    "selected_model": "random_forest",
     "metrics": {
-      "r2": 0.9806,
-      "mae": 11.7304,
-      "rmse": 18.2238
+      "r2": 0.9686,
+      "mae": 17.6864,
+      "rmse": 23.2629
     },
     "comparison": {
       "linear_regression": {
-        "r2": 0.6808,
-        "mae": 54.1932,
-        "rmse": 73.9283
+        "r2": 0.3977,
+        "mae": 79.6193,
+        "rmse": 101.8912
       },
       "random_forest": {
-        "r2": 0.9783,
-        "mae": 12.1339,
-        "rmse": 19.2931
+        "r2": 0.9686,
+        "mae": 17.6864,
+        "rmse": 23.2629
       },
       "xgboost": {
-        "r2": 0.9806,
-        "mae": 11.7304,
-        "rmse": 18.2238
+        "r2": 0.964,
+        "mae": 18.2557,
+        "rmse": 24.9087
       }
     },
     "model_path": "occupancy_forecaster.joblib"
   },
-  "last_trained": "2026-10-07T10:54:15.746703+00:00",
+  "last_trained": "2026-10-13T08:20:05.450352+00:00",
   "source": "uploaded"
 }
